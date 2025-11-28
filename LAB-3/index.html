@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amaan Ahmed — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Amaan Ahmed</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero container">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="accent">Amaan Ahmed</span></h1>
+        <p class="lead">Computer engineering student and web developer. I build clean, responsive front-ends and prototype embedded systems for lab projects.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Hire / Collaborate</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Put your profile picture at assets/profile.jpg -->
+        <img src="/Profile-picture.jpg" alt="Profile photo of Amaan Ahmed" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>I’m a computer engineering student who enjoys front-end development (HTML/CSS/JS) and love solving the real life problems.</p>
+    </section>
+
+    <!-- SKILLS (Grid) -->
+    <section id="skills" class="container skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">HTML &amp; CSS (Responsive)</div>
+        <div class="skill-card">JavaScript (Vanilla & ES6)</div>
+        <div class="skill-card">React (Basics)</div>
+        <div class="skill-card">Arduino / ESP32</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">Data Logging & CSV</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (Grid) -->
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <img src="assets/project-portfolio.jpg" alt="Responsive portfolio screenshot" />
+          <div class="project-body">
+            <h3>Responsive Portfolio (This Site)</h3>
+            <p>A one-page responsive portfolio built with mobile-first CSS, Flexbox, and Grid. Includes accessible navigation and animations.</p>
+            <a class="btn small" href="https://github.com/amaan-ahmed/portfolio" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <img src="assets/project-todo.jpg" alt="To-do app screenshot" />
+          <div class="project-body">
+            <h3>To-Do App (Vanilla JS)</h3>
+            <p>Small single-page app implementing tasks, categories, and localStorage persistence — useful for practicing DOM manipulation and state management.</p>
+            <a class="btn small" href="https://github.com/amaan-ahmed/todo-app" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <img src="assets/project-sensor.jpg" alt="Sensor data logger" />
+          <div class="project-body">
+            <h3>Sensor Data Logger (Lab)</h3>
+            <p>Arduino + SD/serial logger that records sensor readings (temperature, light) to CSV for later analysis. Includes README with wiring and code.</p>
+            <a class="btn small" href="https://github.com/amaan-ahmed/sensor-logger" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Want to discuss a project or need help with a lab? Reach out below or connect on GitHub / LinkedIn.</p>
+      <form class="contact-form" action="#" method="post" onsubmit="return false;">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Amaan Ahmed — All rights reserved.</p>
+      <div class="socials">
+        <!-- Replace with your real profiles -->
+        <a href="https://github.com/Amaan-Ahmed786" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for year and nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
